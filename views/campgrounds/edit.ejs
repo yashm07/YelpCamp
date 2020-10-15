@@ -1,0 +1,43 @@
+<%- include("../partials/header") %>
+
+<div class="row">
+	<h1 style="text-align: center;">Edit <%= campground.name %> </h1>
+	<div style="width: 30%; margin: 25px auto;">
+		<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input id="name" class="form-control" type="text" value="<%= campground.name %>" name="campground[name]" required>
+			</div>
+			<div class="form-group">
+				<label for="price">Price/Night</label>
+				<input id="price" class="form-control" type="number" value="<%= campground.price %>" name="campground[price]" min="0.00" step="0.01" required>
+			</div>
+			<div class="form-group">
+				<label for="image">Image</label>
+				<input id="image" class="form-control" type="text" value="<%= campground.image %>" name="campground[image]" required>
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<textarea id="description" class="form-control" type="text" placeholder="description" name="description" required><%= campground.description %></textarea>
+			</div>
+			<div class="form-group">
+				<label for="number">Number</label>
+				<input id="number" class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="campground[number]" value="<%= campground.number %>" required>
+			</div>
+			<div class="form-group">
+				<label for="website">Website</label>
+				<input id="website" class="form-control" type="url" name="campground[website]" value="<%= campground.website %>">
+			</div>
+			<div class="form-group">
+				<label for="location">Location</label>
+				<input class="form-control" type="text" name="campground[location]" id="location" value="<%= campground.location %>" required>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+			</div>
+		</form>
+		<a href="/campgrounds">Go Back</a>
+	</div>
+</div>	
+
+<%- include("../partials/footer") %>

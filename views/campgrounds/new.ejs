@@ -1,0 +1,44 @@
+<%- include("../partials/header") %>
+
+		<div class="row">
+			<h1 style="text-align: center;">Create a New Campground</h1>
+			<div style="width: 30%; margin: 25px auto;">
+				<form action="/campgrounds" method="POST">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input id="name" class="form-control" type="text" placeholder="The Best Campground" name="name" required>
+					</div>
+					<div class="form-group">
+						<label for="price">Price/Night</label>
+						<input id="price" class="form-control" type="number" placeholder="9.99" name="price" min="0.00" step="0.01" required>
+					</div>
+					<div class="form-group">
+						<label for="Image">Image</label>
+						<input id="image" class="form-control" type="text" placeholder="image url" name="image" required>
+					</div>
+					<div class="form-group">
+						<label for="description">Description</label>
+						<textarea id="description" class="form-control" type="text" placeholder="This is the greatest campground..." name="description" required></textarea>
+					</div>
+					<div class="form-group">
+						<label for="number">Number</label>
+						<input id="number" class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="number" placeholder="(905)-999-9999" required>
+					</div>
+					<div class="form-group">
+						<label for="website">Website</label>
+						<input id="website" class="form-control" type="url" name="website" placeholder="https://www.johndoe.com">
+					</div>
+					<div class="form-group">
+						<label for="location">Location</label>
+						<input class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA" required>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-lg btn-primary btn-block">Submit!</button>
+					</div>
+				</form>
+				<a href="/campgrounds">Go Back</a>
+			</div>
+		</div>	
+
+
+<%- include("../partials/footer") %>

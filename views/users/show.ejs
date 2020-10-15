@@ -1,0 +1,52 @@
+<%- include("../partials/headerSemantic") %>
+
+<div class="row">
+	<div class="col-md-4">
+		<h1><%= user.firstName + " " + user.lastName %></h1>
+		<div class="thumbnail">
+			<img src="<%= user.avatar %>" alt="user profile image">
+			<div class="caption">
+				Email: <a href="mailto:<%= user.email %>"><%= user.email %></a>
+			</div>
+		</div>
+		<hr id="seperation" align="left">
+		<p id="special">About Me</p>
+		<p id="aboutMe"><%= user.aboutMe %></p>
+	</div>
+	<div class="col-md-8">
+		<div class="ui main text">
+			<div class="ui huge header">Reviewed Campgrounds:</div>
+				<div class="ui top attached segment">
+					<div class="ui divided items">
+						<% for (const campground of campgrounds) { %>
+							<div class="item">
+								<div class="image">
+									<img src="<%= campground.image%>" >
+								</div>
+								<div class="content">
+									<a class="header" href="/campgrounds/<%= campground.id %>"><%= campground.name %></a>
+									<div class="meta">
+										<span><%= moment(campground.createdAt).fromNow() %></span>
+									</div>
+									<div class="description">
+										<p><%- campground.description.substring(0, 100)%>...</p>
+									</div>
+									<div class="extra">
+										<a class="ui floated basic violet button" href="/campgrounds/<%= campground.id %>">
+											Read More
+											<i class="right chevron icon"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						<% } %>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<%- include("../partials/footer") %>
+
+
+

@@ -1,0 +1,98 @@
+.thumbnail img {
+	width: 100%;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+#light {
+	opacity: 75%;
+}
+
+.well {
+	background: #ededed;
+}
+
+.row hr#seperation {
+	width: 27%;
+	text-align: left;
+	height: 10px;
+	margin-top: 30px;
+	background: black;
+}
+
+#aboutMe {
+	font-size: 16px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); 
+}
+
+.delete-form {
+	display: inline;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+#special {
+	font-weight: 1000;
+	font-size: 33px;
+	margin-bottom: 20px;
+	font-weight: 400px;
+}
+
+#pad {
+	padding: 10px;
+}
+
+/* List for reviewed campgrounds */
+
+i.icon {
+	font-size: 1.5em;
+}
+
+.container.main {
+	margin-top: 7.0em;
+}
+
+#delete {
+	display: inline;
+}
+
+.image {
+	margin-bottom: 1.2em;
+}
+
+.description {
+	margin: 1.15em 0;
+}
+
+/* Accessing user profile through comment */
+#user {
+	color: black;
+}
+
+#user:hover {
+	color: black;
+}
+
+
+/* Forgot password link */
+
+#forgot {
+	display: block;
+	color: grey;
+	text-align: center;
+}
+
+/* SIDE INFO ON SHOW PAGE */
+.list-group-item {
+	padding: 20px 15px;
+}
