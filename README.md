@@ -3,5 +3,5 @@ YelpCamp is a website that displays campgrounds and their information - location
 
 YelpCamp was the first substantial web application that I created. The goal for this project was to gain a further understanding about back-end development.
 
-If you want to check it out, here is the link to the project: https://yelp-campground123.herokuapp.com/
+If you want to check it out, here is the link to the project: https://yelpcampgrounds-123.herokuapp.com/
 
